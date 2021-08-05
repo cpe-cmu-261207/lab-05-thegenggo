@@ -22,6 +22,7 @@ function Todo() {
     const addTask = (taskName: string) => {
         if (curTask === '') {
             alert('Task cannot be empty')
+            return
         }
         const newId = (new Date()).getTime()
         const newTasks = [{ id: newId, name: taskName }, ...todoTasks]
