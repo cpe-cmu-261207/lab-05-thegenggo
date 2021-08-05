@@ -13,3 +13,4 @@
 https://o365cmu-my.sharepoint.com/:b:/g/personal/chayanin_s_cmu_ac_th1/EaoCQG1WX35OhPGBjLxBNZ4B8CBEcwCYcNxSkdVrD1srfA?e=gyrzyY
 
 เมื่อ Deploy app เรียบร้อยแล้ว ให้ใส่ URL ที่นี่ : 
+https://outrageous-chain.surge.sh/

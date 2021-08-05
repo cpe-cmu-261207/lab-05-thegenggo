@@ -22,15 +22,16 @@ function Todo() {
     const addTask = (taskName: string) => {
         if (curTask === '') {
             alert('Task cannot be empty')
-            return
         }
-        const newId = (new Date()).getTime()
-        const newTasks = [{ id: newId, name: taskName }, ...todoTasks]
+        else {
+            const newId = (new Date()).getTime()
+            const newTasks = [{ id: newId, name: taskName }, ...todoTasks]
 
-        setTodoTasks(newTasks)
-        document.querySelectorAll('input')[0].value = ''
-        setCurTask('')
-        console.log(todoTasks)
+            setTodoTasks(newTasks)
+            document.querySelectorAll('input')[0].value = ''
+            setCurTask('')
+            console.log(todoTasks)
+        }
     }
 
     const doneTask = (id: number) => {
@@ -43,7 +44,7 @@ function Todo() {
             }
             return x.id !== id
         })
-        const newDoneTasks = [{} ,...doneTasks]
+        const newDoneTasks = [{}, ...doneTasks]
         setTodoTasks(newTodoTasks)
         setDoneTasks([{ id: newId, name: taskName }, ...doneTasks])
     }
@@ -69,7 +70,7 @@ function Todo() {
             <div>
                 {/* task example */}
                 {/* Please convert this into a task component */}
-                {todoTasks.map(x => <Task id={x.id} name={x.name} deleteFn={deleteTask} doneFn={doneTask} status={"inprogress"}/>)}
+                {todoTasks.map(x => <Task id={x.id} name={x.name} deleteFn={deleteTask} doneFn={doneTask} status={"inprogress"} />)}
                 {doneTasks.map(x => <Task id={x.id} name={x.name} deleteFn={deleteTask} doneFn={doneTask} status={"done"} />)}
                 {/* another task example */}
 
